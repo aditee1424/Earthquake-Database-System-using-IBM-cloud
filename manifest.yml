@@ -1,0 +1,8 @@
+applications:
+- name:  earthquake
+  memory: 256M
+  command: python main.py
+  buildpack: https://github.com/cloudfoundry/buildpack-python.git
+  random-route: true
+  services:
+  - aditeedb

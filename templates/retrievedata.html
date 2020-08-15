@@ -1,0 +1,44 @@
+<HTML>
+<body>
+<h2>Earthquake information retrieval system</h2>
+
+<hr>
+<h2>1001745502</h2>
+    <h2>Aditee Dakhane</h2>
+    <br>
+<table border = 1>
+
+<!--database rows are fetched-->
+         {% for r in rows %}
+         <tr>
+            <td>{{r["TIME"]}}</td>
+            <td>{{r["LATITUDE"]}}</td>
+            <td> {{r["LONGITUDE"]}}</td>
+            <td>{{r['DEPTH']}}</td>
+            <td>{{r['MAG']}}</td>
+          <td>{{r['MAGTYPE']}}</td>
+          <td>{{r['NST']}}</td>
+          <td>{{r['GAP']}}</td>
+          <td>{{r['DMIN']}}</td>
+           <td>{{r['RMS']}}</td>
+           <td>{{r['NET']}}</td>
+           <td>{{r['ID']}}</td>
+          <td>{{r['UPDATED']}}</td>
+          <td>{{r['PLACE']}}</td>
+          <td>{{r['TYPE']}}</td>
+          <td>{{r['HORIZONTALERROR']}}</td>
+          <td>{{r['DEPTHERROR']}}</td>
+          <td>{{r['MAGERROR']}}</td>
+          <td>{{r['MAGNST']}}</td>
+          <td>{{r['STATUS']}}</td>
+          <td>{{r['LOCATIONSOURCE']}}</td>
+          <td>{{r['MAGSOURCE']}}</td>
+         </tr>
+         {% endfor %}
+      </table>
+
+<hr>
+</p>
+</body>
+</HTML>
+

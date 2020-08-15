@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <form action="/location_in_range" method="get">
+  Show locations in the given magnitude range.
+     Please input low magnitude: <input type="number" name="magX" step="any" maxlength="200" width="60">
+     Please input high magnitude:<input type="number" name="magY" step="any" maxlength="200" width="60">
+  <input type="submit" value="submit">
+</form>
+
+
+<table border = 1>
+
+<!--database rows are fetched-->
+         {% for r in rows %}
+          <tr>
+
+            <td>{{r["LATITUDE"]}}</td>
+            <td> {{r["LONGITUDE"]}}</td>
+            <td>{{r['MAG']}}</td>
+              <td>{{r['MAGTYPE']}}</td>
+            <td>{{r['PLACE']}}</td>
+
+         </tr>
+         {% endfor %}
+      </table>
+
+</body>
+</html>
